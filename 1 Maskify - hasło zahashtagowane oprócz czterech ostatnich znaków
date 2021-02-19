@@ -20,3 +20,39 @@ public static class Kata
 		return cale;
   }
 }
+
+
+////////////sdsddfasdasdasdasdas
+
+
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine(zamaskuj("dsdfsdf"));
+	}
+
+	public static string zamaskuj(string cc)
+	{
+		string maskedCode = "";
+		if (cc.Length >= 4)
+		{
+			
+			for (int i = 0 ; i < cc.Length - 4 ;i++ )
+			{
+				maskedCode += "#";
+			}
+
+			int x= cc.Length-4; 
+			maskedCode += cc.Substring(x,4);
+		}	
+		else
+			maskedCode = cc;
+
+
+		return maskedCode;
+		
+	}
+}
