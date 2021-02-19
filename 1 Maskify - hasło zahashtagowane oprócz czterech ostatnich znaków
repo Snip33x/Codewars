@@ -1,0 +1,22 @@
+public static class Kata
+{
+  // return masked string
+  public static string Maskify(string cc)
+  {
+    string cale = "";
+		int dlg = cc.Length;
+		string odkryte = "";
+		int ilehasz = cc.Length - 4;
+		int multipler = ilehasz;
+
+		if (dlg >= 4)
+		{
+			string krzyzyk = new string ('#', multipler); // tak żeby pomnożyć chara
+			odkryte = cc.Substring(ilehasz, 4 );
+			cale = krzyzyk + odkryte;
+		}
+		else
+			cale = cc;
+		return cale;
+  }
+}
