@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+
+namespace cokolwiek
+{
+    class TestHouse
+    {
+        public static void Main(string[] args)
+        {
+            //Console.WriteLine(IsIsogram("Klusia");
+
+            Console.WriteLine(IsIsogram("moOse"));
+            Console.ReadKey();
+        }
+
+        public static bool IsIsogram(string str)
+        {
+            str = str.ToLower();
+
+            char[] arr = str.ToCharArray();
+
+            Array.Sort(arr);
+            for (int i = 0; i < str.Length - 1; i++)
+            {
+                if (arr[i] == arr[i + 1])
+                    return false;
+            }
+            return true;
+        }
+    }
+
+}
