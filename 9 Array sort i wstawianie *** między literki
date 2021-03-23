@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+
+namespace cokolwiek
+{
+    class TestHouse
+    {
+        public static void Main(string[] args)
+        {
+            string[] k = { "kluś", "dupsko", "miał", "agatka" };
+            //Console.WriteLine(k);
+            Console.Write(TwoSort(k));
+            Console.ReadKey();
+        }
+
+        public static string TwoSort(string[] s)
+        {
+            Array.Sort(s);
+
+            string slowo = "";
+            foreach (char c in s[0])
+            {
+                slowo += c + "***";
+            }
+
+            slowo = slowo.Substring(0, s[0].Length + (s[0].Length -1) *3);
+
+            return slowo  ;
+        }
+
+    }
+}
