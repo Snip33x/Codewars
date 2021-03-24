@@ -18,17 +18,17 @@ namespace cokolwiek
 
         public static string TwoSort(string[] s)
         {
-            Array.Sort(s);
+          Array.Sort(s, StringComparer.Ordinal);
 
-            string slowo = "";
-            foreach (char c in s[0])
-            {
-                slowo += c + "***";
-            }
+          string slowo = "";
+          foreach (char c in s[0])
+          {
+              slowo += c + "***";
+          }
 
-            slowo = slowo.Substring(0, s[0].Length + (s[0].Length -1) *3);
+          slowo = slowo.Substring(0, s[0].Length + (s[0].Length -1) *3);
 
-            return slowo  ;
+          return slowo;
         }
 
     }
