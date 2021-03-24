@@ -33,3 +33,30 @@ namespace cokolwiek
 
     }
 }
+
+/////////////////////
+
+using System;
+
+public class Kata
+{
+  public static string TwoSort(string[] s)
+  {
+    System.Array.Sort(s, StringComparer.Ordinal);
+    char[] c = s[0].ToCharArray();
+    return string.Join("***", c);
+  }  
+}
+
+///////////////////////
+
+using System;
+using System.Linq;
+
+public class Kata
+{
+  public static string TwoSort(string[] s)
+  {
+     return string.Join("***", s.OrderBy(a => a, StringComparer.Ordinal).First().ToArray());
+  }  
+}
