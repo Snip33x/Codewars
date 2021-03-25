@@ -1,0 +1,21 @@
+using System.Collections.Generic;
+using System.Linq;
+using System;
+
+public class Fixer
+{
+  public static List<int> PipeFix(List<int> numbers)
+  {
+      int min, max;
+      min = numbers.Min();
+      max = numbers.Max();
+
+      List<int> dozwrocenia = new List<int>();
+
+      for (int i = min; i <= max; i++)
+      {
+          dozwrocenia.Add(i);
+      }
+      return dozwrocenia;  //      w VS musiałem      return string.Join(", ", dozwrocenia);
+  }
+}
