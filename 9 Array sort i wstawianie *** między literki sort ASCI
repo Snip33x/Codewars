@@ -34,7 +34,7 @@ namespace cokolwiek
     }
 }
 
-/////////////////////
+//////////////////////
 
 using System;
 
