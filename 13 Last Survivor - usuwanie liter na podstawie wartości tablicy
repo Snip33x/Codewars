@@ -15,6 +15,21 @@ public static class Kata
 }
 
 ----
+best practices 
+
+using System; 
+public class Kata
+  {
+    public static string LastSurvivor(string letters, int[] coords)
+    {
+      foreach (var index in coords)
+        letters = letters.Remove(index,1);
+            
+      return letters;
+    }
+}
+
+-------------
 
 namespace Solution 
 {
